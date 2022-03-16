@@ -16,10 +16,13 @@
 </head>
 
 <body>
+
     <section class="container-fluid bg-img row">
+
         <div class="col-md-7 g-3 ">
             <h2>Enter Place</h2>
-            <form class="row">
+            <form class="row" id="form">
+
                 <div class="col-md-12 mt-3">
                     <label for="inputPlace4" class="form-label">Place</label>
                     <input type="text" class="form-control" id="inputPlace4" placeholder="India">
@@ -29,23 +32,22 @@
                     <label for="inputDate4" class="form-label">Date Visited</label>
                     <input type="date" class="form-control" id="inputDate4">
                 </div>
-            
+
                 <div class="col-md-12 mt-3">
                     <label for="inputLocation" class="form-label">Location</label>
                     <input type="text" class="form-control" id="inputLocation" placeholder="Delhi">
                 </div>
-            
+
                 <div class="col-md-12 mt-3">
                     <label for="inputLandmarks" class="form-label">Landmarks</label>
                     <input type="text" class="form-control" id="inputLandmarks" placeholder="Taj Mahal">
                 </div>
-            
+
                 <div class="col-md-12 mt-3">
                     <label for="inputNotess" class="form-label">Notes</label>
                     <textarea class="form-control" placeholder="Notes about the trip" id="inputNotes"></textarea>
-
                 </div>
-            
+
                 <div class="col-md-12 mt-3">
                     <button type="submit" class="btn btn-success">Submit</button>
                 </div>
@@ -53,12 +55,12 @@
             </form>
         </div>
 
-        <div class ="g-3 col-md-5 places float-end">
-            <h2 class ="text-center">Places Visited</h2>
+        <div class="g-3 col-md-5 places float-end">
+            <h2 class="text-center p-3">Places Visited</h2>
+            <div id="placeName"></div>
         </div>
 
     </section>
-
 
 </body>
 
