@@ -22,19 +22,29 @@ $(document).ready(function(){
         
         if (placeVisited.place != ""){
             $("#placeName").append(`<p> ${placeVisited.place} </p>`)
-            $("#placeName").addClass("card-header text-white bg-success mb-3")
+            $("p").addClass("d-flex flex-column card-header text-white bg-success mb-3 card-title")
+            $("#placeName").last().click(function () {
+                $("#details").html(`<p>Date: ${date}</p>
+                                    <p>Location: ${location}</p>
+                                    <p>Landmarks: ${landmarks}</p>
+                                    <p>Notes: ${notes}</p>
+                                `)
+                $("#details").addClass("card-header text-white bg-success mb-3 card-title")
+            })
+            $("#placeName").mouseout(function () {
+                $("#details").empty()
+            })
+            form.reset()
 
         }else{
-            $("#placeName").removeClass("ccard-header text-white bg-success mb-3")
+            $("#placeName").append(`<p> Oops! No value was provided. </p>`)
+            $("p").addClass("card-header text-white bg-danger mb-3 card-title")
         }
-
-
-    
-
-
-
-
-
+    })
+    // clearing the places
+    $("#clear").click(function (e){
+        e.preventDefault()
+        $(".content").empty()
     })
 
 
