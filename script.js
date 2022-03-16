@@ -23,22 +23,22 @@ $(document).ready(function(){
         if (placeVisited.place != ""){
             $("#placeName").append(`<p> ${placeVisited.place} </p>`)
             $("p").addClass("d-flex flex-column card-header text-white bg-success mb-3 card-title")
-            $("#placeName").last().click(function () {
-                $("#details").html(`<p>Date: ${date}</p>
+            $("p").last().click(function () {
+                $("#details").html(`<p>Date Visited: ${date}</p>
                                     <p>Location: ${location}</p>
                                     <p>Landmarks: ${landmarks}</p>
-                                    <p>Notes: ${notes}</p>
+                                    <p>Notes About Place: ${notes}</p>
                                 `)
-                $("#details").addClass("card-header text-white bg-success mb-3 card-title")
+                $("#details").addClass("card-body text-white bg-success mb-3")
             })
             $("#placeName").mouseout(function () {
                 $("#details").empty()
+                $("#details").removeClass("card-body text-white bg-success mb-3")
             })
             form.reset()
 
         }else{
             $("#placeName").append(`<p> Oops! No value was provided. </p>`)
-            $("p").addClass("card-header text-white bg-danger mb-3 card-title")
         }
     })
     // clearing the places
