@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@300&display=swap');
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Yantramanav', sans-serif !important;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+.bg-img{
+    background: url('./assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+input ,textarea{
+    background: transparent !important;
+}
+input:focus{
+    color: rgb(0, 0, 0) !important ;
+}
+::placeholder{
+    color: rgb(0, 0, 0) !important;
+}
+
