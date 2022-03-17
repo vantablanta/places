@@ -33,7 +33,6 @@ $(document).ready(function(){
             })
             $("#placeName").mouseout(function () {
                 $("#details").empty()
-                $("#details").removeClass("card-body text-white bg-success mb-3")
             })
             form.reset()
 
@@ -46,10 +45,4 @@ $(document).ready(function(){
         e.preventDefault()
         $(".content").empty()
     })
-
-
-
-
-
-
 })
