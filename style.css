@@ -13,10 +13,7 @@ section{
 }
 .bg-img{
     background: url('./assets/bg-img.jpg');
-    background-repeat: no-repeat;
     background-position: center;
-    width: 100vw;
-    height: 100vh;
 }
 
 textarea, input{

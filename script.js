@@ -32,17 +32,19 @@ $(document).ready(function(){
                 $("#details").addClass("card-body text-white bg-success mb-3")
             })
             $("#placeName").mouseout(function () {
+                $("#details").removeClass("card-body text-white bg-success mb-3")
                 $("#details").empty()
             })
             form.reset()
-
         }else{
             $("#placeName").append(`<p> Oops! No value was provided. </p>`)
+            $("p").removeClass("d-flex flex-column card-header text-white bg-success mb-3 card-title")
         }
     })
     // clearing the places
     $("#clear").click(function (e){
         e.preventDefault()
-        $(".content").empty()
+        $("#placeName").empty()
+        $("#details").empty()
     })
 })
